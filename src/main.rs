@@ -1,25 +1,25 @@
 mod cliente;
 mod usuario;
 
+use cliente::Cliente;
+use usuario::Usuario;
+
 fn main()
 {
-    let cliente = cliente::Cliente
-    {
-        nome: String::from("Fernando Costa Migliorini"),
-        email: String::from("fercosmig@gmai.com")
-    };
+    let cli: Cliente = Cliente::new
+    (
+        String::from("Fernando Costa Migliotini"),
+        String::from("fercosmig@gmail.com")
+    );
 
-    println!("{}", cliente.nome);
-    println!("{}", cliente.email);
+    println!("Cliente => nome:{} e e-mail: {}", cli.nome, cli.email);
 
-    let usuario = usuario::Usuario
-    {
-        nome: String::from("Jurandir Migliorini"),
-        email: String::from("j.migliorini@gmail.com"),
-        senha: String::from("123")
-    };
+    let user: Usuario = Usuario::new
+    (
+        "Jurandir Migliorini".to_string(),
+        "j.migliorini@gmail.com".to_string(),
+        "123".to_string()
+    );
 
-    println!("{}", usuario.nome);
-    println!("{}", usuario.email);
-    println!("{}", usuario.senha);
+    println!("Usuário => nome:{}, e-mail: {} e senha: {}", user.nome, user.email, user.senha);
 }
