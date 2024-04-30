@@ -7,8 +7,6 @@ use usuario::Usuario;
 mod cliente_controller;
 use cliente_controller::ClienteController;
 
-use std::io;
-
 fn main()
 {
     let mut cliente: Cliente = Cliente::new
