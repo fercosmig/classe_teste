@@ -1,7 +1,7 @@
 pub struct Cliente
 {
     pub nome: String,
-    pub email: String
+    pub email: String    
 }
 
 impl Cliente
@@ -11,7 +11,7 @@ impl Cliente
         Cliente
         {
             nome,
-            email
+            email         
         }
     }
 }
